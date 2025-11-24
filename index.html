@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефимов Валерий - Юрист по арбитражным спорам и недвижимости</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background: #f8f9fa; color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #2c3e50; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #3498db; }
+        
+        .hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 150px 0 100px; text-align: center; margin-top: 60px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+        .cta-button { display: inline-block; background: #e74c3c; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
+        .cta-button:hover { background: #c0392b; }
+        
+        .services { padding: 80px 0; background: white; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: #2c3e50; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: #f8f9fa; padding: 2rem; border-radius: 10px; text-align: center; transition: transform 0.3s; border: 1px solid #e9ecef; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; color: #3498db; }
+        
+        .about { padding: 80px 0; background: #f8f9fa; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        
+        .contact { padding: 80px 0; background: white; }
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .form-group textarea { height: 120px; resize: vertical; }
+        .submit-btn { background: #2c3e50; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background 0.3s; }
+        .submit-btn:hover { background: #3498db; }
+        
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .about-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Ефимов Валерий</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Профессиональная юридическая защита</h1>
+            <p>Арбитражные споры, недвижимость, защита прав бизнеса. Опыт работы более 10 лет</p>
+            <a href="#contact" class="cta-button">Получить консультацию</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Мои услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Арбитражные споры</h3>
+                    <p>Защита интересов в арбитражных судах, взыскание долгов, споры с контрагентами</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Недвижимость</h3>
+                    <p>Юридическое сопровождение сделок, споры по недвижимости, права дольщиков</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Бизнес-консультирование</h3>
+                    <p>Правовое сопровождение бизнеса, договорная работа, корпоративные споры</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Ефимов Валерий</h3>
+                    <p>Профессиональный юрист с более чем 10-летним опытом работы в области арбитражного права и недвижимости.</p>
+                    <p>Специализируюсь на сложных судебных спорах, защите прав предпринимателей и юридическом сопровождении сделок с недвижимостью.</p>
+                </div>
+                <div class="about-features">
+                    <div style="margin-bottom: 10px;">✅ Высшее юридическое образование</div>
+                    <div style="margin-bottom: 10px;">✅ Опыт работы более 10 лет</div>
+                    <div style="margin-bottom: 10px;">✅ 200+ успешных дел</div>
+                    <div style="margin-bottom: 10px;">✅ Индивидуальный подход</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь со мной</h2>
+            <form class="contact-form" action="https://formspree.io/f/xdknqjqv" method="POST">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" placeholder="Опишите вашу ситуацию..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Ефимов Валерий. Все права защищены.</p>
+            <p>Телефон: +7 (XXX) XXX-XX-XX | Email: info@efimov-legal.ru</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            submitBtn.textContent = 'Отправка...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
+                    form.reset();
+                } else {
+                    alert('Ошибка отправки. Пожалуйста, позвоните по телефону.');
+                }
+            } catch (error) {
+                alert('Ошибка сети. Попробуйте еще раз.');
+            } finally {
+                submitBtn.textContent = 'Отправить заявку';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
