@@ -29,6 +29,19 @@
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .service-icon { font-size: 3rem; margin-bottom: 1rem; color: #3498db; }
         
+        /* НОВАЯ СЕКЦИЯ ДЛЯ ВИДЖЕТА */
+        .widget-section { 
+            background: #f8f9fa; 
+            padding: 80px 0; 
+            text-align: center; 
+        }
+        .widget-container { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+        
         .about { padding: 80px 0; background: #f8f9fa; }
         .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
         
@@ -42,21 +55,6 @@
         .submit-btn:hover { background: #3498db; }
         
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
-        
-        /* Стили для виджета */
-        .widget-section { 
-            background: #f8f9fa; 
-            padding: 40px 0; 
-            text-align: center; 
-        }
-        .widget-container { 
-            max-width: 300px; 
-            margin: 0 auto; 
-            background: white; 
-            padding: 20px; 
-            border-radius: 10px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
-        }
         
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -110,12 +108,11 @@
         </div>
     </section>
 
-    <!-- Секция для виджета -->
+    <!-- ВОТ ТУТ РЕАЛЬНО ПЕРЕНЕС ВИДЖЕТ - МЕЖДУ УСЛУГАМИ И "ОБО МНЕ" -->
     <section class="widget-section">
         <div class="container">
-            <h2 class="section-title">Мои отзывы</h2>
+            <h2 class="section-title">Отзывы клиентов</h2>
             <div class="widget-container">
-                <!-- Контейнер для виджета -->
                 <div class="PRVD-widget__container PRVD-widget__prvd--l PRVD-widget__marg--minus" id="PRVD-widget__container-ifw-692709138b33d">
                     <div class="PRVD-widget__caption">
                         <p>Рейтинг</p>
