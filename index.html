@@ -43,6 +43,21 @@
         
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
         
+        /* Стили для виджета */
+        .widget-section { 
+            background: #f8f9fa; 
+            padding: 40px 0; 
+            text-align: center; 
+        }
+        .widget-container { 
+            max-width: 300px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        }
+        
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2rem; }
@@ -95,6 +110,24 @@
         </div>
     </section>
 
+    <!-- Секция для виджета -->
+    <section class="widget-section">
+        <div class="container">
+            <h2 class="section-title">Мои отзывы</h2>
+            <div class="widget-container">
+                <!-- Контейнер для виджета -->
+                <div class="PRVD-widget__container PRVD-widget__prvd--l PRVD-widget__marg--minus" id="PRVD-widget__container-ifw-692709138b33d">
+                    <div class="PRVD-widget__caption">
+                        <p>Рейтинг</p>
+                        <a href="https://pravoved.ru" class="PRVD-widget__logo" title="Правовед.ru" target="_blank">
+                            <img src="https://pravoved.ru/images/widgetCard/min-logo.png" alt="Правовед.ru" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">Обо мне</h2>
@@ -140,99 +173,83 @@
             <p>© 2024 Ефимов Валерий. Все права защищены.</p>
             <p>Телефон: +7 (953) 907-75-75 | Email: lawer.v.efimov@gmail.com</p>
         </div>
-        
-</div>
     </footer>
 
     <script>
         // Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-});
 
-// Form submission
-const form = document.querySelector('.contact-form');
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(form);
-    const submitBtn = form.querySelector('.submit-btn');
-    
-    submitBtn.textContent = 'Отправка...';
-    submitBtn.disabled = true;
-    
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+        // Form submission
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            submitBtn.textContent = 'Отправка...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
+                    form.reset();
+                } else {
+                    alert('Ошибка отправки. Пожалуйста, позвоните по телефону.');
+                }
+            } catch (error) {
+                alert('Ошибка сети. Попробуйте еще раз.');
+            } finally {
+                submitBtn.textContent = 'Отправить заявку';
+                submitBtn.disabled = false;
             }
         });
-        
-        if (response.ok) {
-            alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
-            form.reset();
-        } else {
-            alert('Ошибка отправки. Пожалуйста, позвоните по телефону.');
-        }
-    } catch (error) {
-        alert('Ошибка сети. Попробуйте еще раз.');
-    } finally {
-        submitBtn.textContent = 'Отправить заявку';
-        submitBtn.disabled = false;
-    }
-});
+
+        // Виджет Правоведа
+        (function() {
+            var params = {
+                'userId': 625506,
+                'widgetType': 'lawyer-vertical-large-feedbacks', 
+                'widgetId': 'ifw-692709138b33d',
+                'host': 'pravoved.ru'
+            };
+            
+            function initWidget(p) {
+                var s = document.createElement('script');
+                s.onload = function() { 
+                    if (window.PRVD && PRVD.widget) {
+                        PRVD.widget.lawyer.init(p);
+                    }
+                };
+                s.async = true;
+                s.src = 'https://balance2.pravoved.ru/js/widget/prvd.lawyer.widget.js';
+                document.head.appendChild(s);
+            }
+            
+            // Ждем полной загрузки DOM
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    initWidget(params);
+                });
+            } else {
+                initWidget(params);
+            }
+        })();
     </script>
-    <footer>
-<!-- ваш футер -->
-</footer>
-
-<script>
-(function() {
-    var params = {
-        'userId': 625506,
-        'widgetType': 'lawyer-vertical-large-feedbacks', 
-        'widgetId': 'ifw-692709138b33d',
-        'host': 'pravoved.ru'
-    };
-    
-    // Ждем полной загрузки DOM
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            initWidget(params);
-        });
-    } else {
-        initWidget(params);
-    }
-    
-    function initWidget(p) {
-        var s = document.createElement('script');
-        s.onload = function() { 
-            if (window.PRVD && PRVD.widget) {
-                PRVD.widget.lawyer.init(p);
-            }
-        };
-        s.async = true;
-        s.src = 'https://balance2.pravoved.ru/js/widget/prvd.lawyer.widget.js';
-        document.head.appendChild(s);
-    }
-})();
-</script>
-
-<!-- Контейнер для виджета -->
-<div class="PRVD-widget__container PRVD-widget__prvd--l PRVD-widget__marg--minus" id="PRVD-widget__container-ifw-692709138b33d">
-    <div class="PRVD-widget__caption">
-        <p>Рейтинг</p>
-        <a href="https://pravoved.ru" class="PRVD-widget__logo" title="Правовед.ru" target="_blank">
-            <img src="https://pravoved.ru/images/widgetCard/min-logo.png" alt="Правовед.ru" />
-        </a>
-    </div>
-</div>
 </body>
 </html>
