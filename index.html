@@ -140,25 +140,7 @@
             <p>© 2024 Ефимов Валерий. Все права защищены.</p>
             <p>Телефон: +7 (953) 907-75-75 | Email: lawer.v.efimov@gmail.com</p>
         </div>
-        <script>
-(function () {
-var params = {
-    'userId': 625506,
-    'widgetType': 'lawyer-vertical-large-feedbacks',
-    'widgetId': 'ifw-692709138b33d',
-    'host': 'pravoved.ru'
-};
-var s = document.createElement('script');
-s.onload = function() {PRVD.widget.lawyer.init(params);};
-s.async = true;
-s.src = 'https://balance2.pravoved.ru/js/widget/prvd.lawyer.widget.js';
-document.head.appendChild(s);
-}());
-</script>
-<div class="PRVD-widget__container PRVD-widget__prvd--l PRVD-widget__marg--minus" id="PRVD-widget__container-ifw-692709138b33d">
-<div class="PRVD-widget__caption">
-<p>Рейтинг</p><a href="https://pravoved.ru" class="PRVD-widget__logo" title="Правовед.ru" target="_blank"><img src="https://pravoved.ru/images/widgetCard/min-logo.png" alt="Правовед.ru" /></a>
-</div>
+        
 </div>
     </footer>
 
@@ -207,5 +189,50 @@ form.addEventListener('submit', async (e) => {
     }
 });
     </script>
+    <footer>
+<!-- ваш футер -->
+</footer>
+
+<script>
+(function() {
+    var params = {
+        'userId': 625506,
+        'widgetType': 'lawyer-vertical-large-feedbacks', 
+        'widgetId': 'ifw-692709138b33d',
+        'host': 'pravoved.ru'
+    };
+    
+    // Ждем полной загрузки DOM
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            initWidget(params);
+        });
+    } else {
+        initWidget(params);
+    }
+    
+    function initWidget(p) {
+        var s = document.createElement('script');
+        s.onload = function() { 
+            if (window.PRVD && PRVD.widget) {
+                PRVD.widget.lawyer.init(p);
+            }
+        };
+        s.async = true;
+        s.src = 'https://balance2.pravoved.ru/js/widget/prvd.lawyer.widget.js';
+        document.head.appendChild(s);
+    }
+})();
+</script>
+
+<!-- Контейнер для виджета -->
+<div class="PRVD-widget__container PRVD-widget__prvd--l PRVD-widget__marg--minus" id="PRVD-widget__container-ifw-692709138b33d">
+    <div class="PRVD-widget__caption">
+        <p>Рейтинг</p>
+        <a href="https://pravoved.ru" class="PRVD-widget__logo" title="Правовед.ru" target="_blank">
+            <img src="https://pravoved.ru/images/widgetCard/min-logo.png" alt="Правовед.ru" />
+        </a>
+    </div>
+</div>
 </body>
 </html>
