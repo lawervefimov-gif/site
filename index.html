@@ -16,6 +16,34 @@
         .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
         .nav-links a:hover { color: #3498db; }
         
+        /* Стили для гамбургер-меню */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
         .hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 150px 0 100px; text-align: center; margin-top: 60px; }
         .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
@@ -75,7 +103,41 @@
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
         
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background: #2c3e50;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+                gap: 1rem;
+            }
+            
+            .nav-links.active {
+                left: 0;
+                display: flex;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
             .hero h1 { font-size: 2rem; }
             .about-content { grid-template-columns: 1fr; }
             .video-container iframe {
@@ -93,7 +155,12 @@
         <div class="container">
             <nav>
                 <div class="logo">Ефимов Валерий</div>
-                <ul class="nav-links">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#about">Обо мне</a></li>
                    <li><a href="https://blog.efimov-legal.ru" target="_blank">📝 Наш блог</a></li>
@@ -256,6 +323,23 @@
     </footer>
 
     <script>
+        // Гамбургер-меню
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
