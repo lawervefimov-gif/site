@@ -29,17 +29,25 @@
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .service-icon { font-size: 3rem; margin-bottom: 1rem; color: #3498db; }
         
-        /* НОВАЯ СЕКЦИЯ ДЛЯ ВИДЖЕТА */
+        /* СТИЛИ ДЛЯ ВИДЖЕТА 9111.RU */
         .widget-section { 
             background: #f8f9fa; 
             padding: 80px 0; 
             text-align: center; 
         }
-        .widget-container { 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 200px;
+        .widget-9111 {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); 
+            border: 1px solid #d1d7e0; 
+            padding: 30px; 
+            border-radius: 12px; 
+            max-width: 500px; 
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .widget-9111:hover {
+            transform: translateY(-5px);
         }
         
         .about { padding: 80px 0; background: #f8f9fa; }
@@ -72,6 +80,10 @@
             .about-content { grid-template-columns: 1fr; }
             .video-container iframe {
                 height: 250px;
+            }
+            .widget-9111 {
+                margin: 0 15px;
+                padding: 20px;
             }
         }
     </style>
@@ -121,19 +133,73 @@
         </div>
     </section>
 
-    <!-- ВОТ ТУТ РЕАЛЬНО ПЕРЕНЕС ВИДЖЕТ - МЕЖДУ УСЛУГАМИ И "ОБО МНЕ" -->
+    <!-- ВИДЖЕТ 9111.RU -->
     <section class="widget-section">
         <div class="container">
             <h2 class="section-title">Отзывы клиентов</h2>
-            <div class="widget-container">
-                <div class="PRVD-widget__container PRVD-widget__prvd--l PRVD-widget__marg--minus" id="PRVD-widget__container-ifw-692709138b33d">
-                    <div class="PRVD-widget__caption">
-                        <p>Рейтинг</p>
-                        <a href="https://pravoved.ru" class="PRVD-widget__logo" title="Правовед.ru" target="_blank">
-                            <img src="https://pravoved.ru/images/widgetCard/min-logo.png" alt="Правовед.ru" />
-                        </a>
+            <div class="widget-9111">
+                <!-- Заголовок и рейтинг -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="font-size: 24px; font-weight: 700; color: #2c3e50;">Ефимов Валерий Павлович</div>
+                    <div style="font-size: 15px; color: #5d6d7e; margin-bottom: 15px;">Юрист на 9111.ru</div>
+                    
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                        <div style="font-size: 42px; font-weight: 800; color: #e67e22; line-height: 1;">4.7</div>
+                        <div style="margin-left: 15px;">
+                            <div style="color: #f1c40f; font-size: 20px; letter-spacing: 2px;">★★★★★</div>
+                            <div style="font-size: 13px; color: #7f8c8d;">Рейтинг консультаций</div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-around; font-size: 14px; color: #5d6d7e; margin-top: 20px;">
+                        <div style="text-align: center;">
+                            <div style="font-weight: 700; color: #2c3e50; font-size: 18px;">241 026</div>
+                            <div>посетили анкету</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-weight: 700; color: #2c3e50; font-size: 18px;">296</div>
+                            <div>за сутки</div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Последние отзывы -->
+                <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; border: 1px solid #e9ecef;">
+                    <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Последние отзывы:</div>
+                    
+                    <div class="review" style="border-left: 4px solid #3498db; padding-left: 15px; margin-bottom: 20px;">
+                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Огромное спасибо за такой подробный и компетентный ответ!"</div>
+                        <div style="font-size: 13px; color: #7f8c8d; margin-top: 8px;">
+                            <span style="font-weight: 600;">Елена</span> (г. Саратов) • вчера
+                        </div>
+                    </div>
+                    
+                    <div class="review" style="border-left: 4px solid #2ecc71; padding-left: 15px; margin-bottom: 20px;">
+                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Спасибо, буду действовать."</div>
+                        <div style="font-size: 13px; color: #7f8c8d; margin-top: 8px;">
+                            <span style="font-weight: 600;">Светлана</span> (г. Краснодар) • вчера
+                        </div>
+                    </div>
+                    
+                    <div class="review" style="border-left: 4px solid #9b59b6; padding-left: 15px;">
+                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Благодарю за информацию!"</div>
+                        <div style="font-size: 13px; color: #7f8c8d; margin-top: 8px;">
+                            <span style="font-weight: 600;">Максим</span> (г. Ростов-на-Дону) • позавчера
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопка -->
+                <a href="https://www.9111.ru/id-efimov_pravo/" target="_blank" 
+                   style="display: block; text-align: center; padding: 15px; 
+                          background: linear-gradient(to right, #2980b9, #2c5aa0); 
+                          color: white; text-decoration: none; border-radius: 8px; 
+                          font-weight: 600; font-size: 16px; 
+                          transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(41, 128, 185, 0.4)';"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(41, 128, 185, 0.3)';">
+                    Читать все отзывы на 9111.ru
+                </a>
             </div>
         </div>
     </section>
@@ -232,37 +298,6 @@
                 submitBtn.disabled = false;
             }
         });
-
-        // Виджет Правоведа
-        (function() {
-            var params = {
-                'userId': 625506,
-                'widgetType': 'lawyer-vertical-large-feedbacks', 
-                'widgetId': 'ifw-692709138b33d',
-                'host': 'pravoved.ru'
-            };
-            
-            function initWidget(p) {
-                var s = document.createElement('script');
-                s.onload = function() { 
-                    if (window.PRVD && PRVD.widget) {
-                        PRVD.widget.lawyer.init(p);
-                    }
-                };
-                s.async = true;
-                s.src = 'https://balance2.pravoved.ru/js/widget/prvd.lawyer.widget.js';
-                document.head.appendChild(s);
-            }
-            
-            // Ждем полной загрузки DOM
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', function() {
-                    initWidget(params);
-                });
-            } else {
-                initWidget(params);
-            }
-        })();
     </script>
 </body>
 </html>
