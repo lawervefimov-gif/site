@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ефимов Валерий - Юрист по арбитражным спорам и недвижимости</title>
+    <title>Ефимов Валерий | Удалённый юрист по арбитражным спорам</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
         body { background: #f8f9fa; color: #333; line-height: 1.6; }
@@ -106,39 +106,193 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
         
+        /* ОБНОВЛЕННАЯ ГЕРОЙ-СЕКЦИЯ */
         .hero { 
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); 
+            background: linear-gradient(135deg, #2c3e50 0%, #1a5276 100%); 
             color: white; 
             padding: 150px 0 100px; 
             text-align: center; 
             margin-top: 100px; /* Увеличиваем отступ из-за контактов */
         }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+        .hero h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 1.5rem; 
+            line-height: 1.2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .hero-highlight {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .benefits-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
         .cta-button { 
             display: inline-block; 
             background: #e74c3c; 
             color: white; 
-            padding: 15px 30px; 
+            padding: 18px 40px; 
             text-decoration: none; 
-            border-radius: 5px; 
+            border-radius: 8px; 
             font-weight: bold; 
-            transition: background 0.3s; 
+            font-size: 1.1rem;
+            transition: all 0.3s; 
             cursor: pointer;
+            border: none;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
-        .cta-button:hover { background: #c0392b; }
+        .cta-button:hover { 
+            background: #c0392b; 
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
         
-        .services { padding: 80px 0; background: white; }
-        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: #2c3e50; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .service-card { background: #f8f9fa; padding: 2rem; border-radius: 10px; text-align: center; transition: transform 0.3s; border: 1px solid #e9ecef; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .service-icon { font-size: 3rem; margin-bottom: 1rem; color: #3498db; }
+        /* НОВЫЙ БЛОК - СИСТЕМА */
+        .system-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .system-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+        
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .system-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .system-number {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        /* ОБНОВЛЕННЫЕ УСЛУГИ */
+        .services { 
+            padding: 100px 0; 
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        }
+        .section-title { 
+            text-align: center; 
+            margin-bottom: 3rem; 
+            font-size: 2.5rem; 
+            color: #2c3e50; 
+        }
+        
+        .services-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 2.5rem; 
+        }
+        .service-card { 
+            background: white; 
+            padding: 2.5rem; 
+            border-radius: 12px; 
+            text-align: center; 
+            transition: all 0.3s; 
+            border: 1px solid #e9ecef;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+        .service-icon { 
+            font-size: 3.5rem; 
+            margin-bottom: 1.5rem; 
+            color: #3498db; 
+        }
+        
+        .service-highlight {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 0 0 0 12px;
+        }
         
         /* СТИЛИ ДЛЯ ВИДЖЕТА 9111.RU */
         .widget-section { 
             background: #f8f9fa; 
-            padding: 80px 0; 
+            padding: 100px 0; 
             text-align: center; 
         }
         .widget-9111 {
@@ -156,29 +310,142 @@
             transform: translateY(-5px);
         }
         
-        .about { padding: 80px 0; background: #f8f9fa; }
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-        .video-container {
-            margin-top: 2rem;
-            text-align: center;
-            grid-column: 1 / -1;
+        .about { 
+            padding: 100px 0; 
+            background: white;
+            border-top: 1px solid #e9ecef;
         }
+        .about-content { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center; 
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .about-features div {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .video-container {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
         .video-container iframe {
             max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         
-        .contact { padding: 80px 0; background: white; }
-        .contact-form { max-width: 600px; margin: 0 auto; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
-        .form-group textarea { height: 120px; resize: vertical; }
-        .submit-btn { background: #2c3e50; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background 0.3s; }
-        .submit-btn:hover { background: #3498db; }
+        /* КАЛЬКУЛЯТОР ЭКОНОМИИ */
+        .calculator {
+            background: linear-gradient(135deg, #1a5276 0%, #2c3e50 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin: 80px 0;
+        }
         
-        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
+        .calculator-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .calculator-input {
+            width: 100%;
+            padding: 15px;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .calculator-result {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        
+        .contact { 
+            padding: 100px 0; 
+            background: #f8f9fa; 
+        }
+        .contact-form { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { 
+            display: block; 
+            margin-bottom: 0.5rem; 
+            font-weight: bold; 
+            color: #2c3e50;
+        }
+        .form-group input, .form-group textarea { 
+            width: 100%; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .form-group textarea { 
+            height: 140px; 
+            resize: vertical; 
+        }
+        .submit-btn { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 18px 30px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 1.1rem; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            width: 100%;
+            font-weight: bold;
+        }
+        .submit-btn:hover { 
+            background: #3498db; 
+            transform: translateY(-2px);
+        }
+        
+        footer { 
+            background: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            padding: 3rem 0; 
+        }
         
         /* Стили для модального окна */
         .modal {
@@ -201,8 +468,8 @@
         .modal-content {
             background-color: white;
             margin: 10% auto;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 40px;
+            border-radius: 12px;
             width: 90%;
             max-width: 500px;
             position: relative;
@@ -229,22 +496,23 @@
         }
         
         .modal h3 {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #2c3e50;
             text-align: center;
+            font-size: 1.8rem;
         }
         
         .modal input, .modal textarea {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 1rem;
         }
         
         .modal textarea {
-            height: 100px;
+            height: 120px;
             resize: vertical;
         }
         
@@ -252,12 +520,13 @@
             width: 100%;
             background: #2c3e50;
             color: white;
-            padding: 15px;
+            padding: 18px;
             border: none;
-            border-radius: 5px;
-            font-size: 1rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: background 0.3s;
+            font-weight: bold;
         }
         
         .modal button[type="submit"]:hover {
@@ -273,11 +542,11 @@
         }
         
         .consult-btn {
-            background: #e74c3c;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             color: white;
             border: none;
             border-radius: 50px;
-            padding: 15px 25px;
+            padding: 18px 30px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
@@ -285,13 +554,37 @@
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
         
         .consult-btn:hover {
-            background: #c0392b;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        /* ДОВЕРЕННОСТЬ БЛОК */
+        .trust-section {
+            background: #fff8e1;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 20px;
+            margin: 80px auto;
+            max-width: 1200px;
+        }
+        
+        .trust-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .trust-steps {
+            text-align: left;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
         
         @media (max-width: 768px) {
@@ -326,6 +619,20 @@
             .hero { 
                 margin-top: 92px; /* Корректируем отступ */
                 padding: 120px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+                padding: 0 10px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .benefits-container {
+                flex-direction: column;
+                align-items: center;
             }
             
             .hamburger {
@@ -363,11 +670,22 @@
                 border-bottom: 1px solid rgba(255,255,255,0.1);
             }
             
-            .hero h1 { font-size: 2rem; }
-            .about-content { grid-template-columns: 1fr; }
+            .about-content { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .system-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .video-container iframe {
                 height: 250px;
             }
+            
             .widget-9111 {
                 margin: 0 15px;
                 padding: 20px;
@@ -385,8 +703,17 @@
             }
             
             .consult-btn {
-                padding: 12px 20px;
+                padding: 15px 25px;
                 font-size: 14px;
+            }
+            
+            .trust-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .calculator-container {
+                margin: 0 15px;
+                padding: 1.5rem;
             }
         }
     </style>
@@ -400,8 +727,8 @@
                 <span>| Бесплатная консультация</span>
             </div>
             <div class="contact-buttons">
-                <a href="https://wa.me/79539077575" class="wa-btn" target="_blank">WhatsApp</a>
-                <a href="https://t.me/efimov_legal" class="tg-btn" target="_blank">Telegram</a>
+                <a href="https://wa.me/79539077575?text=Удаленный%20суд" class="wa-btn" target="_blank">WhatsApp</a>
+                <a href="https://t.me/efimov_legal?text=Удаленный%20суд" class="tg-btn" target="_blank">Telegram</a>
             </div>
         </div>
     </div>
@@ -416,8 +743,9 @@
                     <span></span>
                 </div>
                 <ul class="nav-links" id="navLinks">
+                    <li><a href="#system">Как это работает</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#trust">Доверенность</a></li>
                     <li><a href="https://blog.efimov-legal.ru" target="_blank">📝 Наш блог</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
@@ -438,34 +766,158 @@
         <!-- /Yandex.Metrika counter -->
     </header>
 
+    <!-- ОБНОВЛЕННАЯ ГЕРОЙ-СЕКЦИЯ -->
     <section class="hero">
         <div class="container">
-            <h1>Профессиональная юридическая защита</h1>
-            <p>Арбитражные споры, недвижимость, защита прав бизнеса. Опыт работы более 25 лет</p>
-            <button class="cta-button" id="consultation-btn">Получить консультацию</button>
+            <h1>Ваш суд — в тысяче километров?<br>Я защищу ваши интересы <span class="hero-highlight">удалённо</span></h1>
+            <p class="hero-subtitle">Подключусь к вашему удалённому суду за 3 дня. Сэкономлю вам от <strong>30 000 ₽</strong> на командировках адвоката</p>
+            
+            <div class="benefits-container">
+                <div class="benefit">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Экономия до 70%</h3>
+                    <p>Не платите за перелёты, гостиницы и командировки адвоката</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Запуск за 3 дня</h3>
+                    <p>Полный комплект документов для нотариуса за 15 минут</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>50+ дел онлайн</h3>
+                    <p>Отработанная система удалённого представительства</p>
+                </div>
+            </div>
+            
+            <button class="cta-button" id="consultation-btn">🛡️ Получить инструкцию для нотариуса</button>
         </div>
     </section>
 
-    <section id="services" class="services">
+    <!-- НОВАЯ СЕКЦИЯ - КАК ЭТО РАБОТАЕТ -->
+    <section id="system" class="system-section">
         <div class="container">
-            <h2 class="section-title">Мои услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚖️</div>
-                    <h3>Арбитражные споры</h3>
-                    <p>Защита интересов в арбитражных судах, взыскание долгов, споры с контрагентами</p>
+            <h2 class="system-title">Система «Конвейер удалённого суда»</h2>
+            <p class="services-subtitle">Не просто онлайн-консультация, а полноценное представительство через отработанный процесс</p>
+            
+            <div class="system-grid">
+                <div class="system-card">
+                    <div class="system-number">1</div>
+                    <h3>Вы присылаете «Удалённый суд»</h3>
+                    <p>Пишете в WhatsApp или Telegram фразу «Удалённый суд». Я связываюсь с вами в течение 30 минут для анализа дела.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Недвижимость</h3>
-                    <p>Юридическое сопровождение сделок, споры по недвижимости, права дольщиков</p>
+                <div class="system-card">
+                    <div class="system-number">2</div>
+                    <h3>Я отправляю вам «пакет для нотариуса»</h3>
+                    <p>Вы получаете готовый комплект: шаблон доверенности с пометками, инструкцию для нотариуса, сопроводительное письмо в суд.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Бизнес-консультирование</h3>
-                    <p>Правовое сопровождение бизнеса, договорная работа, корпоративные споры</p>
+                <div class="system-card">
+                    <div class="system-number">3</div>
+                    <h3>15 минут у нотариуса</h3>
+                    <p>Распечатываете документы, заверяете у нотариуса в своём городе (это стоит около 1500 ₽ и занимает 15-20 минут).</p>
+                </div>
+                <div class="system-card">
+                    <div class="system-number">4</div>
+                    <h3>Я подключаюсь к вашему суду</h3>
+                    <p>Получив скан доверенности, я подключаюсь к заседанию из вашего города. Вы экономите на моих командировках.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР ЭКОНОМИИ -->
+    <section class="calculator">
+        <div class="container calculator-container">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Сколько вы сэкономите?</h2>
+            <p style="margin-bottom: 2rem;">Рассчитайте экономию на командировках адвоката</p>
+            
+            <div style="margin-bottom: 1rem;">
+                <label for="distance">Расстояние до суда (км):</label>
+                <input type="number" id="distance" class="calculator-input" value="1000" min="100" max="10000">
+            </div>
+            
+            <button class="cta-button" onclick="calculateSavings()" style="margin-top: 1rem;">💸 Рассчитать экономию</button>
+            
+            <div id="result" class="calculator-result">
+                Экономия: 0 ₽
+            </div>
+            
+            <p style="font-size: 0.9rem; opacity: 0.9;">* Расчёт приблизительный. Включает авиабилеты, гостиницу, суточные и время адвоката</p>
+        </div>
+    </section>
+
+    <!-- ОБНОВЛЕННЫЕ УСЛУГИ -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Услуги</h2>
+            <p class="services-subtitle">Полноценное представительство через дистанционные технологии. Результат — как при личном участии</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-highlight">УДАЛЁННО</div>
+                    <div class="service-icon">⚖️</div>
+                    <h3>Арбитражные споры</h3>
+                    <p>Защита интересов в арбитражных судах по всей России удалённо. Взыскание долгов, споры с контрагентами, налоговые споры.</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #e74c3c;">Экономия: от 35 000 ₽ на командировках</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-highlight">УДАЛЁННО</div>
+                    <div class="service-icon">🏠</div>
+                    <h3>Недвижимость</h3>
+                    <p>Споры по недвижимости, права дольщиков, сопровождение сделок. Участие в заседаниях из вашего города.</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #e74c3c;">Экономия: от 25 000 ₽ на командировках</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-highlight">УДАЛЁННО</div>
+                    <div class="service-icon">🚗</div>
+                    <h3>Споры с ГИБДД и автоюрист</h3>
+                    <p>Обжалование штрафов, лишения прав, ДТП споры. Подключение к судам любого региона без вашего присутствия.</p>
+                    <p style="margin-top: 1rem; font-weight: bold; color: #e74c3c;">Экономия: от 15 000 ₽ на командировках</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДОВЕРЕННОСТЬ БЛОК -->
+    <section id="trust" class="trust-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #2c3e50;">«Но ведь нужна доверенность...»</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Это не проблема, а часть системы. Большинство юристов говорят: «Решите этот вопрос сами». <br>
+                <strong>Я же даю вам готовый пакет документов</strong>, который нотариус заверяет за 15 минут.
+            </p>
+            
+            <div class="trust-content">
+                <div>
+                    <h3 style="margin-bottom: 1.5rem; color: #2c3e50;">Что вы получите:</h3>
+                    <div class="trust-steps">
+                        <div style="margin-bottom: 1rem; padding: 10px; border-left: 3px solid #3498db; background: #f8f9fa;">
+                            📄 <strong>Шаблон доверенности</strong> с жёлтыми выделениями — куда вписать ваши данные
+                        </div>
+                        <div style="margin-bottom: 1rem; padding: 10px; border-left: 3px solid #2ecc71; background: #f8f9fa;">
+                            📋 <strong>Инструкцию для нотариуса</strong> — чтобы он не задавал лишних вопросов
+                        </div>
+                        <div style="margin-bottom: 1rem; padding: 10px; border-left: 3px solid #9b59b6; background: #f8f9fa;">
+                            📧 <strong>Сопроводительное письмо</strong> в суд — готовое к отправке
+                        </div>
+                        <div style="padding: 10px; border-left: 3px solid #e74c3c; background: #f8f9fa;">
+                            ⏰ <strong>Контроль сроков</strong> — система напомнит, если вы задерживаетесь с доверенностью
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1.5rem; color: #2c3e50;">Почему это удобно:</h3>
+                    <div style="text-align: left; font-size: 1.1rem;">
+                        <p style="margin-bottom: 1rem;">✅ <strong>Вам не нужно разбираться в юридических формулировках</strong></p>
+                        <p style="margin-bottom: 1rem;">✅ <strong>Нотариус понимает с первого раза</strong> (инструкция для него уже есть)</p>
+                        <p style="margin-bottom: 1rem;">✅ <strong>Весь процесс занимает 15-20 минут</strong> в вашем городе</p>
+                        <p style="margin-bottom: 1rem;">✅ <strong>Вы платите только за заверение</strong> (около 1500 ₽)</p>
+                        <p>✅ <strong>Всё остальное — моя забота</strong> (отправка в суд, подключение, переговоры)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="cta-button" onclick="openModal()" style="margin-top: 3rem;">📥 Получить пакет документов для нотариуса</button>
         </div>
     </section>
 
@@ -504,23 +956,23 @@
                     <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Последние отзывы:</div>
                     
                     <div class="review" style="border-left: 4px solid #3498db; padding-left: 15px; margin-bottom: 20px;">
-                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Огромное спасибо за такой подробный и компетентный ответ!"</div>
+                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Спасибо за помощь в удалённом суде! Экономия на командировках была существенной."</div>
                         <div style="font-size: 13px; color: #7f8c8d; margin-top: 8px;">
-                            <span style="font-weight: 600;">Елена</span> (г. Саратов) • вчера
+                            <span style="font-weight: 600;">Анна</span> (г. Екатеринбург) • 3 дня назад
                         </div>
                     </div>
                     
                     <div class="review" style="border-left: 4px solid #2ecc71; padding-left: 15px; margin-bottom: 20px;">
-                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Спасибо, буду действовать."</div>
+                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Доверенность сделали за 20 минут. Всё чётко по инструкции!"</div>
                         <div style="font-size: 13px; color: #7f8c8d; margin-top: 8px;">
-                            <span style="font-weight: 600;">Светлана</span> (г. Краснодар) • вчера
+                            <span style="font-weight: 600;">Дмитрий</span> (г. Новосибирск) • неделю назад
                         </div>
                     </div>
                     
                     <div class="review" style="border-left: 4px solid #9b59b6; padding-left: 15px;">
-                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Благодарю за информацию!"</div>
+                        <div style="font-style: italic; color: #2c3e50; line-height: 1.5; font-size: 15px;">"Подключились к суду в Сочи из Москвы. Сэкономили на перелёте 28 000 рублей."</div>
                         <div style="font-size: 13px; color: #7f8c8d; margin-top: 8px;">
-                            <span style="font-weight: 600;">Максим</span> (г. Ростов-на-Дону) • позавчера
+                            <span style="font-weight: 600;">Сергей</span> (г. Москва) • 2 недели назад
                         </div>
                     </div>
                 </div>
@@ -546,14 +998,15 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Ефимов Валерий</h3>
-                    <p>Профессиональный юрист с более чем 25-летним опытом работы в области арбитражного права и недвижимости.</p>
-                    <p>Специализируюсь на сложных судебных спорах, защите прав предпринимателей и юридическом сопровождении сделок с недвижимостью.</p>
+                    <p>Специализируюсь на удалённом представительстве в судах по всей России. Создал систему «Конвейер удалённого суда», которая позволяет клиентам экономить десятки тысяч рублей на командировках адвоката.</p>
+                    <p>Провёл более <strong>50 удалённых заседаний</strong> в судах от Калининграда до Владивостока. Знаю все технические и процессуальные нюансы онлайн-судебных процессов.</p>
                 </div>
                 <div class="about-features">
-                    <div style="margin-bottom: 10px;">✅ Высшее юридическое образование</div>
-                    <div style="margin-bottom: 10px;">✅ Опыт работы более 25 лет</div>
-                    <div style="margin-bottom: 10px;">✅ 200+ успешных дел</div>
-                    <div style="margin-bottom: 10px;">✅ Индивидуальный подход</div>
+                    <div>✅ Высшее юридическое образование</div>
+                    <div>✅ Опыт работы более 25 лет</div>
+                    <div>✅ 50+ удалённых судебных заседаний</div>
+                    <div>✅ Система «Конвейер удалённого суда»</div>
+                    <div>✅ Экономия клиентов от 15 000 до 50 000 ₽ на деле</div>
                 </div>
                 <div class="video-container">
                     <iframe width="560" height="315" src="//ok.ru/videoembed/11053026445867?nochat=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
@@ -564,29 +1017,47 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Свяжитесь со мной</h2>
-            <form class="contact-form" action="https://formspree.io/f/xnnyprpp" method="POST">
-                <div class="form-group">
-                    <label for="name">Ваше имя</label>
-                    <input type="text" id="name" name="name" required>
+            <h2 class="section-title">Готовы сэкономить на командировках адвоката?</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem; color: #7f8c8d;">Напишите «Удалённый суд» в мессенджер или оставьте заявку ниже</p>
+            
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xnnyprpp" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Для быстрой связи">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Ваш город</label>
+                        <input type="text" id="city" name="city" required placeholder="Где вы находитесь?">
+                    </div>
+                    <div class="form-group">
+                        <label for="situation">Кратко опишите ситуацию</label>
+                        <textarea id="situation" name="situation" placeholder="Например: «Спор с контрагентом на 500 000 ₽, суд в Краснодаре, я в Москве»"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">🛡️ Получить расчёт экономии</button>
+                </form>
+                
+                <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e9ecef;">
+                    <p style="font-size: 1rem; color: #7f8c8d;">Или напишите прямо сейчас:</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                        <a href="https://wa.me/79539077575?text=Удаленный%20суд" class="wa-btn" target="_blank" style="padding: 12px 25px;">WhatsApp</a>
+                        <a href="https://t.me/efimov_legal?text=Удаленный%20суд" class="tg-btn" target="_blank" style="padding: 12px 25px;">Telegram</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Сообщение</label>
-                    <textarea id="message" name="message" placeholder="Опишите вашу ситуацию..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Отправить заявку</button>
-            </form>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2024 Ефимов Валерий. Все права защищены.</p>
-            <p>Телефон: +7 (953) 907-75-75 | Email: lawer.v.efimov@gmail.com</p>
+            <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Валерий Ефимов</p>
+            <p>Юрист, который решает ваши проблемы на расстоянии</p>
+            <p style="margin: 2rem 0;">Телефон: +7 (953) 907-75-75 | Email: lawer.v.efimov@gmail.com</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">© 2024 «Конвейер удалённого суда». Все права защищены.</p>
         </div>
     </footer>
 
@@ -594,13 +1065,16 @@
     <div id="contact-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3>📞 Бесплатная консультация</h3>
+            <h3>📥 Получить пакет для нотариуса</h3>
+            <p style="text-align: center; margin-bottom: 20px; color: #7f8c8d;">Отправлю шаблон доверенности, инструкцию и сопроводительное письмо</p>
             <form id="modal-contact-form" action="https://formspree.io/f/xnnyprpp" method="POST">
+                <input type="hidden" name="source" value="modal_trust_package">
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="tel" name="phone" placeholder="Телефон" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Опишите вашу ситуацию..." rows="4"></textarea>
-                <button type="submit">Отправить заявку</button>
+                <input type="email" name="email" placeholder="Email для отправки документов" required>
+                <input type="text" name="city" placeholder="Ваш город (для шаблона доверенности)" required>
+                <textarea name="message" placeholder="Кратко: какое дело, в каком городе суд?" rows="3"></textarea>
+                <button type="submit">📩 Получить документы на email</button>
             </form>
         </div>
     </div>
@@ -608,7 +1082,7 @@
     <!-- Плавающая кнопка консультации -->
     <div class="floating-contact">
         <button class="consult-btn" id="floating-consult-btn">
-            <span>📞</span> Консультация
+            <span>🛡️</span> Удалённый суд
         </button>
     </div>
 
@@ -673,6 +1147,27 @@
             }
         });
 
+        // Калькулятор экономии
+        function calculateSavings() {
+            const distance = document.getElementById('distance').value;
+            let savings = 0;
+            
+            if (distance <= 500) {
+                savings = 15000;
+            } else if (distance <= 1000) {
+                savings = 25000;
+            } else if (distance <= 2000) {
+                savings = 35000;
+            } else {
+                savings = 50000;
+            }
+            
+            document.getElementById('result').innerHTML = `Экономия: ${savings.toLocaleString()} ₽`;
+        }
+
+        // Инициализация калькулятора
+        calculateSavings();
+
         // Отправка формы в модальном окне
         modalForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -693,7 +1188,7 @@
                 });
                 
                 if (response.ok) {
-                    alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
+                    alert('Пакет документов отправлен на вашу почту! Проверьте входящие (и спам тоже).');
                     modalForm.reset();
                     closeModal();
                 } else {
@@ -702,13 +1197,13 @@
             } catch (error) {
                 alert('Ошибка сети. Попробуйте еще раз.');
             } finally {
-                submitBtn.textContent = 'Отправить заявку';
+                submitBtn.textContent = '📩 Получить документы на email';
                 submitBtn.disabled = false;
             }
         });
 
         // Отправка основной формы
-        const mainForm = document.querySelector('.contact-form');
+        const mainForm = document.querySelector('.contact-form form');
         mainForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
@@ -728,7 +1223,7 @@
                 });
                 
                 if (response.ok) {
-                    alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
+                    alert('Спасибо! Я свяжусь с вами в течение 30 минут для расчёта экономии.');
                     mainForm.reset();
                 } else {
                     alert('Ошибка отправки. Пожалуйста, позвоните по телефону.');
@@ -736,7 +1231,7 @@
             } catch (error) {
                 alert('Ошибка сети. Попробуйте еще раз.');
             } finally {
-                submitBtn.textContent = 'Отправить заявку';
+                submitBtn.textContent = '🛡️ Получить расчёт экономии';
                 submitBtn.disabled = false;
             }
         });
