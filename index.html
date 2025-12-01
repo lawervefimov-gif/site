@@ -9,7 +9,69 @@
         body { background: #f8f9fa; color: #333; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        header { background: #2c3e50; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        /* Контакты в шапке */
+        .header-contacts {
+            background: #2c3e50;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1001;
+        }
+        
+        .contacts-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .phone-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .wa-btn, .tg-btn {
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+        
+        .wa-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .tg-btn {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .wa-btn:hover, .tg-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        header { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 1rem 0; 
+            position: fixed; 
+            width: 100%; 
+            top: 40px; /* Смещаем ниже контактов */
+            z-index: 1000; 
+        }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: bold; }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
@@ -44,10 +106,26 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
         
-        .hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 150px 0 100px; text-align: center; margin-top: 60px; }
+        .hero { 
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); 
+            color: white; 
+            padding: 150px 0 100px; 
+            text-align: center; 
+            margin-top: 100px; /* Увеличиваем отступ из-за контактов */
+        }
         .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
-        .cta-button { display: inline-block; background: #e74c3c; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
+        .cta-button { 
+            display: inline-block; 
+            background: #e74c3c; 
+            color: white; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background 0.3s; 
+            cursor: pointer;
+        }
         .cta-button:hover { background: #c0392b; }
         
         .services { padding: 80px 0; background: white; }
@@ -102,17 +180,164 @@
         
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
         
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: slideIn 0.3s;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        .modal h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .modal input, .modal textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .modal textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .modal button[type="submit"] {
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .modal button[type="submit"]:hover {
+            background: #3498db;
+        }
+        
+        /* Плавающая кнопка консультации */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .consult-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .consult-btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+        
         @media (max-width: 768px) {
+            .header-contacts {
+                padding: 6px 0;
+                font-size: 12px;
+            }
+            
+            .contacts-wrapper {
+                justify-content: center;
+                gap: 8px;
+            }
+            
+            .phone-link {
+                margin-right: 0;
+                font-size: 13px;
+            }
+            
+            .contact-buttons {
+                gap: 5px;
+            }
+            
+            .wa-btn, .tg-btn {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+            
+            header { 
+                top: 32px; /* Меньший отступ для мобильных */
+            }
+            
+            .hero { 
+                margin-top: 92px; /* Корректируем отступ */
+                padding: 120px 0 80px;
+            }
+            
             .hamburger {
                 display: flex;
             }
             
             .nav-links {
                 position: fixed;
-                top: 60px;
+                top: 92px; /* Учитываем контакты и шапку */
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 60px);
+                height: calc(100vh - 92px);
                 background: #2c3e50;
                 flex-direction: column;
                 align-items: center;
@@ -147,10 +372,40 @@
                 margin: 0 15px;
                 padding: 20px;
             }
+            
+            .modal-content {
+                margin: 20% auto;
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .floating-contact {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .consult-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Контакты в шапке -->
+    <div class="header-contacts">
+        <div class="container contacts-wrapper">
+            <div>
+                <a href="tel:+79539077575" class="phone-link">📞 +7 (953) 907-75-75</a>
+                <span>| Бесплатная консультация</span>
+            </div>
+            <div class="contact-buttons">
+                <a href="https://wa.me/79539077575" class="wa-btn" target="_blank">WhatsApp</a>
+                <a href="https://t.me/efimov_legal" class="tg-btn" target="_blank">Telegram</a>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <nav>
@@ -163,31 +418,31 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#about">Обо мне</a></li>
-                   <li><a href="https://blog.efimov-legal.ru" target="_blank">📝 Наш блог</a></li>
+                    <li><a href="https://blog.efimov-legal.ru" target="_blank">📝 Наш блог</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
         </div>
-   <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105587990', 'ym');
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105587990', 'ym');
 
-    ym(105587990, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/105587990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+            ym(105587990, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/105587990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
     </header>
 
     <section class="hero">
         <div class="container">
             <h1>Профессиональная юридическая защита</h1>
             <p>Арбитражные споры, недвижимость, защита прав бизнеса. Опыт работы более 25 лет</p>
-            <a href="#contact" class="cta-button">Получить консультацию</a>
+            <button class="cta-button" id="consultation-btn">Получить консультацию</button>
         </div>
     </section>
 
@@ -301,7 +556,7 @@
                     <div style="margin-bottom: 10px;">✅ Индивидуальный подход</div>
                 </div>
                 <div class="video-container">
-                    <iframe width="560" height="315" src="//ok.ru/videoembed/10882167802411?nochat=1&autoplay=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                    <iframe src="https://disk.yandex.ru/preview/YTtSxkQiheqFgA" width="560" height="315" frameborder="0" allow="autoplay" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -335,6 +590,28 @@
         </div>
     </footer>
 
+    <!-- Модальное окно для консультации -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>📞 Бесплатная консультация</h3>
+            <form id="modal-contact-form" action="https://formspree.io/f/xnnyprpp" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Опишите вашу ситуацию..." rows="4"></textarea>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Плавающая кнопка консультации -->
+    <div class="floating-contact">
+        <button class="consult-btn" id="floating-consult-btn">
+            <span>📞</span> Консультация
+        </button>
+    </div>
+
     <script>
         // Гамбургер-меню
         const hamburger = document.getElementById('hamburger');
@@ -363,19 +640,51 @@
             });
         });
 
-        // Form submission
-        const form = document.querySelector('.contact-form');
-        form.addEventListener('submit', async (e) => {
+        // Модальное окно
+        const modal = document.getElementById('contact-modal');
+        const consultationBtn = document.getElementById('consultation-btn');
+        const floatingConsultBtn = document.getElementById('floating-consult-btn');
+        const closeBtn = document.querySelector('.close');
+        const modalForm = document.getElementById('modal-contact-form');
+
+        // Открытие модального окна
+        function openModal() {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Блокируем скролл
+        }
+
+        // Закрытие модального окна
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Возвращаем скролл
+        }
+
+        // Обработчики для открытия модального окна
+        consultationBtn.addEventListener('click', openModal);
+        floatingConsultBtn.addEventListener('click', openModal);
+
+        // Закрытие по крестику
+        closeBtn.addEventListener('click', closeModal);
+
+        // Закрытие по клику вне модального окна
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Отправка формы в модальном окне
+        modalForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('.submit-btn');
+            const submitBtn = modalForm.querySelector('button[type="submit"]');
+            const formData = new FormData(modalForm);
             
             submitBtn.textContent = 'Отправка...';
             submitBtn.disabled = true;
             
             try {
-                const response = await fetch(form.action, {
+                const response = await fetch(modalForm.action, {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -385,7 +694,42 @@
                 
                 if (response.ok) {
                     alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
-                    form.reset();
+                    modalForm.reset();
+                    closeModal();
+                } else {
+                    alert('Ошибка отправки. Пожалуйста, позвоните по телефону.');
+                }
+            } catch (error) {
+                alert('Ошибка сети. Попробуйте еще раз.');
+            } finally {
+                submitBtn.textContent = 'Отправить заявку';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Отправка основной формы
+        const mainForm = document.querySelector('.contact-form');
+        mainForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(mainForm);
+            const submitBtn = mainForm.querySelector('.submit-btn');
+            
+            submitBtn.textContent = 'Отправка...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(mainForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Заявка отправлена! Свяжусь с вами в ближайшее время.');
+                    mainForm.reset();
                 } else {
                     alert('Ошибка отправки. Пожалуйста, позвоните по телефону.');
                 }
