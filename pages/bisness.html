@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Да, ту самую проблему из поста. Решаю за 24 часа | Валерий Ефимов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ту юридическую проблему, о которой вы только что читали. Решаю за 24 часа. Напишите в Telegram или WhatsApp.">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105587990', 'ym');
+
+        ym(105587990, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105587990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: #0f172a; 
+            color: white;
+            line-height: 1.6;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+        /* ШАПКА */
+        .header {
+            text-align: center;
+            padding: 20px 20px;
+            border-bottom: 2px solid #dc2626;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .main-site-link {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1e293b;
+            color: #fbbf24;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: 1px solid #334155;
+        }
+        .main-site-link:hover {
+            background: #2d3748;
+            color: white;
+        }
+        .name {
+            font-size: 36px;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 500px;
+        }
+
+        /* ГЛАВНЫЙ БЛОК */
+        .hero {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero h1 span {
+            color: #dc2626;
+            display: block;
+            font-size: 44px;
+            margin-top: 10px;
+        }
+        .hero-text {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin: 30px 0;
+            padding: 0 10px;
+        }
+
+        /* ТОЧНО ВАША СИТУАЦИЯ */
+        .pain-point {
+            background: #1e293b;
+            border-left: 5px solid #dc2626;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .pain-point h3 {
+            color: #fbbf24;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .pain-point ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pain-point li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .pain-point li:before {
+            content: "•";
+            color: #dc2626;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* ЧТО БУДЕТ */
+        .solution {
+            background: #dc2626;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .solution h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .solution-steps {
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .step {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .step-number {
+            display: inline-block;
+            background: white;
+            color: #dc2626;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: 900;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        .step-text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* КНОПКИ */
+        .messengers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 50px 0;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 20px;
+            border-radius: 14px;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+        }
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #24A1DE);
+            color: white;
+            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+        }
+        .btn-telegram:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5);
+        }
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ГАРАНТИЯ */
+        .guarantee {
+            text-align: center;
+            padding: 40px 20px;
+            background: #1e293b;
+            border-radius: 16px;
+            margin: 50px 0;
+        }
+        .guarantee h2 {
+            color: #fbbf24;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* ФУТЕР */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+            margin-top: 30px;
+        }
+        .contact {
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .footer-link {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .main-site-link {
+                position: static;
+                transform: none;
+                order: 3;
+                margin-top: 10px;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .name {
+                font-size: 32px;
+                order: 1;
+            }
+            .title {
+                font-size: 16px;
+                order: 2;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero h1 span {
+                font-size: 34px;
+            }
+            .btn {
+                font-size: 18px;
+                padding: 20px;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            .header {
+                padding: 15px;
+            }
+            .name {
+                font-size: 28px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero h1 span {
+                font-size: 30px;
+            }
+            .pain-point {
+                padding: 20px;
+            }
+            .solution {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ШАПКА С ССЫЛКОЙ НА ГЛАВНУЮ -->
+        <div class="header">
+            <a href="https://efimov-legal.ru" class="main-site-link" onclick="ym(105587990,'reachGoal','main_site_click')">
+                ← На главную
+            </a>
+            <div class="header-content">
+                <div class="name">ВАЛЕРИЙ ЕФИМОВ</div>
+                <div class="title">Юрист, который решает проблемы, о которых вы только что читали</div>
+            </div>
+        </div>
+
+        <!-- ГЛАВНЫЙ БЛОК -->
+        <div class="hero">
+            <h1>ДА, ТУ САМУЮ ПРОБЛЕМУ.<br><span>РЕШАЮ ЗА 24 ЧАСА</span></h1>
+            
+            <p class="hero-text">
+                Вы только что дочитали пост про "слишком поздно", про "авось рассосётся" и про клиента, который звонит, когда уже всё горит.
+                <br><br>
+                <strong>Это не просто история. Это ваша ситуация прямо сейчас.</strong> И я знаю, как её решить.
+            </p>
+
+            <!-- ТОЧНО ВАША СИТУАЦИЯ -->
+            <div class="pain-point">
+                <h3>Если вы сейчас:</h3>
+                <ul>
+                    <li><strong>Упустили сроки</strong> в договоре и теперь вас давят</li>
+                    <li><strong>Партнёр или клиент не платит</strong>, а вы боитесь суда</li>
+                    <li><strong>Налоговая прислала необоснованное требование</strong> и вы в растерянности</li>
+                    <li><strong>Бывший сотрудник увёл клиентов</strong> и вы не знаете, как доказать</li>
+                    <li><strong>Подписали договор с опасной оговоркой</strong> и теперь платите</li>
+                    <li><strong>Конкурент вредит</strong>, а вы не понимаете, как ответить легально</li>
+                </ul>
+                <p style="margin-top: 20px; color: #fbbf24; font-weight: 700;">
+                    Да, именно об этом вы и читали. И да, я это решаю каждый день.
+                </p>
+            </div>
+        </div>
+
+        <!-- ЧТО БУДЕТ -->
+        <div class="solution">
+            <h2>ВОТ КАК МЫ ЭТО РЕШИМ:</h2>
+            <div class="solution-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Вы пишете мне в Telegram или WhatsApp. Описываете ситуацию так же, как в посте — эмоционально, с болью.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Я задаю 3-4 точных вопроса. За 10 минут понимаю суть. Не "приходите завтра", а сразу.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Говорю вам: "Это решаемо. Вот план из 2-3 шагов. Вот сроки. Вот стоимость". Без воды.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Если согласны — начинаем работать. Первый результат часто есть в течение суток.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- КНОПКИ -->
+        <div class="messengers">
+            <a href="https://t.me/efimov_legal_bot?start=from_post" class="btn btn-telegram" onclick="ym(105587990,'reachGoal','telegram_click')">
+                <svg class="btn-icon" fill="white" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.98-.65-.34-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.24-.02-.1.02-1.7 1.08-4.8 3.17-.45.31-.86.46-1.23.45-.41-.01-1.2-.23-1.79-.42-.72-.23-1.3-.36-1.25-.76.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.36-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .z"/>
+                </svg>
+                Написать в Telegram
+            </a>
+            
+            <a href="https://wa.me/79539077575?text=Только%20что%20прочитал%20пост.%20У%20меня%20точь-в-точь%20такая%20ситуация:" class="btn btn-whatsapp" onclick="ym(105587990,'reachGoal','whatsapp_click')">
+                <svg class="btn-icon" fill="white" viewBox="0 0 24 24">
+                    <path d="M17.6 6.3C16 4.7 13.9 3.8 11.6 3.8 7 3.8 3.3 7.5 3.3 12.1c0 1.6.4 3.2 1.1 4.6L3 21l4.4-1.2c1.3.7 2.8 1.1 4.3 1.1 4.6 0 8.3-3.7 8.3-8.3 0-2.3-.9-4.4-2.4-6zM11.6 19c-1.2 0-2.4-.3-3.4-.9l-.2-.1-2.5.7.7-2.4-.1-.2c-.7-1-.9-2.3-.9-3.5 0-3.6 2.9-6.5 6.5-6.5 1.7 0 3.4.7 4.6 1.8 1.2 1.2 1.8 2.8 1.8 4.6.1 3.6-2.9 6.5-6.5 6.5zm3.6-4.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.9 1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.2-.2.3-.2.4-.3.2-.1.3-.3.4-.5.1-.2.1-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4-.2 0-.4 0-.6.1-.2.1-.4.2-.6.3-.2.2-.8.7-.8 1.7 0 .9.7 1.9.8 2 .1.1 1.4 2.1 3.4 3 .5.2.9.4 1.2.5.5.2 1 .2 1.3.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
+                </svg>
+                Написать в WhatsApp
+            </a>
+        </div>
+
+        <!-- ГАРАНТИЯ -->
+        <div class="guarantee">
+            <h2>ПОЧЕМУ ЭТО СРАБОТАЕТ:</h2>
+            <p style="font-size: 18px; margin-bottom: 15px;">
+                Я уже знаю вашу боль. Я только что описал её в посте.
+            </p>
+            <p style="font-size: 18px; margin-bottom: 15px;">
+                Я не буду спрашивать "что случилось?" — я уже понимаю контекст.
+            </p>
+            <p style="font-size: 18px; font-weight: 700; color: #fbbf24;">
+                Мы начинаем с того места, где закончился пост: "И что теперь делать?" — и я даю ответ.
+            </p>
+        </div>
+
+        <!-- ФУТЕР -->
+        <div class="footer">
+            <p class="contact">Telegram: @efimov_legal | WhatsApp: +7 (953) 907-75-75</p>
+            
+            <div class="footer-links">
+                <a href="https://efimov-legal.ru" class="footer-link" onclick="ym(105587990,'reachGoal','footer_main_site_click')">
+                    Основной сайт
+                </a>
+                <a href="https://efimov-legal.ru/services" class="footer-link" onclick="ym(105587990,'reachGoal','footer_services_click')">
+                    Услуги
+                </a>
+                <a href="https://efimov-legal.ru/cases" class="footer-link" onclick="ym(105587990,'reachGoal','footer_cases_click')">
+                    Кейсы
+                </a>
+                <a href="https://efimov-legal.ru/contacts" class="footer-link" onclick="ym(105587990,'reachGoal','footer_contacts_click')">
+                    Контакты
+                </a>
+            </div>
+            
+            <p style="margin-top: 20px;">© Валерий Ефимов. Решаю проблемы, о которых вы читаете.</p>
+            <p style="margin-top: 10px; font-size: 14px;">Не является юридической консультацией. Отвечаю в рабочее время.</p>
+        </div>
+    </div>
+
+    <script>
+        // Отслеживание кликов для Яндекс.Метрики
+        document.addEventListener('DOMContentLoaded', function() {
+            // Отслеживание всех кликов по кнопкам мессенджеров
+            const telegramBtn = document.querySelector('.btn-telegram');
+            const whatsappBtn = document.querySelector('.btn-whatsapp');
+            
+            if (telegramBtn) {
+                telegramBtn.addEventListener('click', function() {
+                    ym(105587990, 'reachGoal', 'telegram_btn_click');
+                });
+            }
+            
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', function() {
+                    ym(105587990, 'reachGoal', 'whatsapp_btn_click');
+                });
+            }
+            
+            // Отслеживание просмотра страницы
+            ym(105587990, 'hit', window.location.href);
+        });
+    </script>
+</body>
+</html>
