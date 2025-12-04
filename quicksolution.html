@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Срочное решение проблемы | Профессиональная помощь</title>
+    <meta name="description" content="Проблема требует немедленного решения? Мы помогаем быстро и эффективно. Консультация бесплатно. Пишите в WhatsApp или Telegram.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+            color: white;
+            padding: 25px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .logo span {
+            color: #4CAF50;
+        }
+        .contact-header {
+            text-align: right;
+            font-size: 18px;
+        }
+        .contact-header a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .contact-header a:hover {
+            color: #4CAF50;
+        }
+        .whatsapp-icon, .telegram-icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        /* Герой */
+        .hero {
+            background: linear-gradient(rgba(26, 42, 58, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        /* Кнопки */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            min-width: 280px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        .btn-telegram {
+            background-color: #0088cc;
+            color: white;
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+        }
+        /* Проблемы */
+        .pain-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .pain-card {
+            background: #f8f9fa;
+            border-left: 6px solid #e74c3c;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .pain-card:hover {
+            transform: translateY(-10px);
+        }
+        .pain-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .pain-card p {
+            color: #555;
+            font-size: 16px;
+        }
+        /* Таймер срочности */
+        .urgency-section {
+            background-color: #e74c3c;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .urgency-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        #countdown-timer {
+            font-size: 64px;
+            font-weight: 900;
+            margin: 30px 0;
+            letter-spacing: 5px;
+        }
+        .timer-note {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+        /* Как мы помогаем */
+        .process-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .step {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        /* Финальный CTA */
+        .final-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+            color: white;
+        }
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .final-cta p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+        /* Футер */
+        footer {
+            background-color: #1a2a3a;
+            color: #aaa;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer-contact a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .disclaimer {
+            font-size: 14px;
+            margin-top: 30px;
+            opacity: 0.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Всплывающее окно */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: popup 0.5s ease-out;
+        }
+        @keyframes popup {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #555;
+        }
+        .modal h3 {
+            color: #e74c3c;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .modal-buttons {
+            margin-top: 30px;
+        }
+        .modal-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin: 10px;
+            min-width: 200px;
+        }
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .btn { min-width: 100%; margin-bottom: 15px; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .header-content { flex-direction: column; text-align: center; }
+            .contact-header { margin-top: 15px; }
+            #countdown-timer { font-size: 48px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Всплывающее окно -->
+    <div class="modal-overlay" id="urgencyModal">
+        <div class="modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h3>⏰ Время работает против вас!</h3>
+            <p>Каждый день бездействия — это растущие убытки, упущенные возможности и усиление проблемы.</p>
+            <p><strong>Получите план решения прямо сейчас</strong> в удобном мессенджере. Консультация — первый шаг к результату.</p>
+            <div class="modal-buttons">
+                <a href="https://wa.me/79539077575?text=Здравствуйте!%20У%20меня%20срочная%20проблема.%20Нужна%20консультация." class="modal-btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp btn-icon"></i> WhatsApp</a>
+                <a href="https://t.me/efimov_legal" class="modal-btn btn-telegram" target="_blank"><i class="fab fa-telegram-plane btn-icon"></i> Telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шапка -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Quick<span>Solution</span></div>
+            <div class="contact-header">
+                <a href="tel:+79539077575"><i class="fas fa-phone"></i> +7 (953) 907-75-75</a>
+                <a href="https://wa.me/79539077575" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon"> WhatsApp</a>
+                <a href="https://t.me/efimov_legal" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="telegram-icon"> Telegram</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="container">
+            <h1>Срочная проблема требует немедленного решения?</h1>
+            <p>Не можете двигаться дальше из-за возникшей сложности? <strong>Не теряйте время.</strong> Каждая проблема имеет решение, если действовать быстро и правильно.</p>
+            <p>Напишите нам прямо сейчас в WhatsApp или Telegram. <strong>Первая консультация — бесплатно.</strong> Получите четкий план уже сегодня.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/79539077575?text=Здравствуйте!%20У%20меня%20срочная%20проблема.%20Нужна%20консультация." class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp btn-icon"></i> Написать в WhatsApp
+                </a>
+                <a href="https://t.me/efimov_legal" class="btn btn-telegram" target="_blank">
+                    <i class="fab fa-telegram-plane btn-icon"></i> Написать в Telegram
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 18px; opacity: 0.9;"><i class="fas fa-shield-alt"></i> Конфиденциально. Без предоплаты. Работаем 24/7</p>
+        </div>
+    </section>
+
+    <!-- Секция "проблем" -->
+    <section class="pain-section">
+        <div class="container">
+            <h2 class="section-title">Узнайте свою ситуацию?</h2>
+            <div class="pain-points">
+                <div class="pain-card">
+                    <h3>💳 Блокировка возможностей</h3>
+                    <p>Вы не можете продолжать деятельность, доступ к ресурсам ограничен. Причины неясны, объяснения отсутствуют. Ситуация кажется безвыходной.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>⏳ Время уходит — деньги теряются</h3>
+                    <p>Каждый день бездействия — это прямые убытки, упущенная выгода, срыв планов и обязательств. Промедление усугубляет проблему.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>😨 Страх последствий</h3>
+                    <p>Вы переживаете, что ситуация может повлечь серьёзные последствия, хотя уверены в своей правоте. Неопределенность пугает.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>📞 Стена непонимания</h3>
+                    <p>Обращения ни к кому не приводят, ответственные лица недоступны, официальные инстанции не отвечают. Вы чувствуете себя один на один с системой.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция срочности с таймером -->
+    <section class="urgency-section">
+        <div class="container">
+            <h2 class="urgency-title">⏰ КРИТИЧЕСКИ ВАЖНО НАЧАТЬ ДЕЙСТВОВАТЬ В ПЕРВЫЕ 24-72 ЧАСА</h2>
+            <div id="countdown-timer">24:00:00</div>
+            <p class="timer-note">Чем дольше тянется проблема, тем сложнее и дороже её решить. У оппонентов накапливаются аргументы. <strong>Не дайте им время укрепить позицию.</strong></p>
+        </div>
+    </section>
+
+    <!-- Секция процесса -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Как мы возвращаем вам контроль над ситуацией</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Анализ и план</h3>
+                    <p>Изучаем вашу ситуацию, документы, обстоятельства. Составляем четкий пошаговый план срочных действий.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Профессиональное давление</h3>
+                    <p>Готовим юридически и технически безупречные запросы. Ведём диалог с нужными инстанциями на правильном языке.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Стратегическое решение</h3>
+                    <p>Применяем эффективные методы для устранения проблемы. Действуем быстро и точно.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Результат и защита</h3>
+                    <p>Добиваемся положительного исхода. Даём рекомендации, чтобы избежать повторения проблемы в будущем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Финальный CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Не ждите, пока ситуация станет необратимой</h2>
+            <p>Прямо сейчас у вас есть возможность получить профессиональную помощь. Напишите в мессенджер и опишите проблему. Мы ответим в течение <strong>15 минут</strong> и скажем, что можно сделать.</p>
+            <p><strong>Промедление — ваш главный враг.</strong></p>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/79539077575?text=Здравствуйте!%20У%20меня%20срочная%20проблема.%20Пришлите%20пожалуйста%20инструкцию%20к%20действию." class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp btn-icon"></i> Получить инструкцию в WhatsApp
+                </a>
+                <a href="https://t.me/efimov_legal" class="btn btn-telegram" target="_blank">
+                    <i class="fab fa-telegram-plane btn-icon"></i> Обсудить в Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p class="footer-contact">
+                <strong>Контакты для срочной связи:</strong><br>
+                <a href="tel:+79539077575">+7 (953) 907-75-75</a> |
+                <a href="https://wa.me/79539077575" target="_blank">WhatsApp</a> |
+                <a href="https://t.me/efimov_legal" target="_blank">Telegram: @efimov_legal</a>
+            </p>
+            <p class="disclaimer">
+                Вся информация на сайте носит ознакомительный характер. Мы не даем гарантий результата, но обладаем успешной практикой решения сложных ситуаций. Каждый случай индивидуален и требует анализа.
+            </p>
+            <p style="margin-top: 20px;">© QuickSolution. Профессиональная помощь в решении срочных проблем.</p>
+        </div>
+    </footer>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105587990', 'ym');
+
+        ym(105587990, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105587990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <script>
+        // ТАЙМЕР ОБРАТНОГО ОТСЧЕТА (24 часа)
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown-timer');
+            let totalSeconds = 24 * 60 * 60; // 24 часа в секундах
+
+            function updateTimer() {
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+
+                countdownElement.textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                } else {
+                    clearInterval(timerInterval);
+                    countdownElement.textContent = "ВРЕМЯ ВЫШЛО!";
+                    countdownElement.style.color = "#e74c3c";
+                }
+            }
+
+            updateTimer();
+            const timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        // ВСПЛЫВАЮЩЕЕ ОКНО СРОЧНОСТИ
+        function showModal() {
+            const modal = document.getElementById('urgencyModal');
+            modal.style.display = 'flex';
+            localStorage.setItem('modalShown', Date.now().toString());
+        }
+
+        function closeModal() {
+            document.getElementById('urgencyModal').style.display = 'none';
+        }
+
+        // Триггеры для показа модального окна:
+        // 1. Через 30 секунд после загрузки
+        setTimeout(() => {
+            if (!localStorage.getItem('modalShown') || (Date.now() - parseInt(localStorage.getItem('modalShown'))) > 86400000) {
+                showModal();
+            }
+        }, 30000);
+
+        // 2. При попытке уйти с курсором за верхнюю границу окна
+        document.addEventListener('mouseleave', function(event) {
+            if (event.clientY < 0) {
+                if (!localStorage.getItem('modalShown') || (Date.now() - parseInt(localStorage.getItem('modalShown'))) > 86400000) {
+                    showModal();
+                }
+            }
+        });
+
+        // 3. Закрытие модалки
+        document.getElementById('closeModal').addEventListener('click', closeModal);
+        document.getElementById('urgencyModal').addEventListener('click', function(event) {
+            if (event.target === this) closeModal();
+        });
+
+        // ЗАПУСК СКРИПТОВ ПРИ ЗАГРУЗКЕ
+        window.addEventListener('DOMContentLoaded', (event) => {
+            startCountdown();
+        });
+
+        // Аналитика кликов по кнопкам
+        document.querySelectorAll('.btn, .modal-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const platform = this.classList.contains('btn-whatsapp') ? 'WhatsApp' : 'Telegram';
+                console.log(`Клик по кнопке ${platform}`);
+                // Отправка события в Яндекс.Метрику
+                if (typeof ym !== 'undefined') {
+                    ym(105587990, 'reachGoal', `click_${platform}`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
