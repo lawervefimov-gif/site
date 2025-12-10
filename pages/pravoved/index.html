@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правовед.ру: цифровое рабство под прикрытием инноваций из Сколково</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 2rem 0;
+            border-bottom: 5px solid #ff5252;
+            margin-bottom: 2rem;
+        }
+        
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-box {
+            background-color: #ff5252;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 82, 82, 0.3);
+        }
+        
+        .cta-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .tg-button {
+            display: inline-block;
+            background-color: #0088cc;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tg-button:hover {
+            background-color: #006699;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tg-button i {
+            margin-right: 8px;
+        }
+        
+        article {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #1a237e;
+            margin: 1.8rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e8eaf6;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+            padding: 1.5rem;
+            border-left: 4px solid #ffc107;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+        
+        .warning {
+            background-color: #ffebee;
+            padding: 1.5rem;
+            border-left: 4px solid #ff5252;
+            margin: 1.5rem 0;
+        }
+        
+        .steps {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .steps li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+        
+        .quote {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1a237e;
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-top: 2px solid #e8eaf6;
+            border-bottom: 2px solid #e8eaf6;
+        }
+        
+        .questions-box {
+            background-color: #e8eaf6;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2.5rem 0;
+        }
+        
+        .questions-box h3 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+        
+        .questions-box ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .questions-box li {
+            margin-bottom: 0.8rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            margin-top: 2rem;
+        }
+        
+        /* Стили для картинок */
+        .article-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: -0.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        
+        .screenshot {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .step-visual {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            background-color: #ff5252;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .infographic {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #1a237e;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            article {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-box {
+                padding: 1.2rem;
+            }
+            
+            .step-visual {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Правовед.ру: цифровое рабство под прикрытием инноваций из Сколково</h1>
+            <p class="subtitle">Расследование эксплуатационной бизнес-модели, дискредитирующей юридическую профессию</p>
+            
+            <!-- ГЛАВНАЯ КАРТИНКА -->
+            <img src="img/1.jpg" alt="Цифровое рабство в юридической сфере" class="article-image">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="cta-box">
+            <h3>Вы юрист, пострадавший от системы "Правовед.ру"?</h3>
+            <p>Расскажите о своем опыте, задайте вопросы и получите консультацию по защите ваших прав</p>
+            <a href="https://t.me/efimov_legal" class="tg-button" target="_blank">
+                <i class="fab fa-telegram-plane"></i> Задать вопрос в Telegram
+            </a>
+        </div>
+        
+        <article>
+            <h2>Введение</h2>
+            
+            <!-- КАРТИНКА 2 -->
+            <img src="img/2.jpg" alt="Скриншот Правовед.ру" class="article-image">
+            <p class="image-caption">Сервис, получивший поддержку инновационного центра «Сколково»</p>
+            
+            <p>Сервис «Правовед.ру», получивший поддержку инновационного центра «Сколково», создал систему, которую многие участники называют цифровым рабством. За громкими заявлениями о развитии юридических технологий скрывается многоуровневая кабала для юристов, где доступ к элементарному заработку требует бесплатного труда, унизительных квестов и полного подчинения произвольным правилам.</p>
+            
+            <div class="warning">
+                <p><strong>Внимание:</strong> Эта статья основана на опыте реальных юристов, столкнувшихся с эксплуатационной системой «Правовед.ру». Имена изменены в целях конфиденциальности.</p>
+            </div>
+            
+            <h2>Инициация: бесплатный труд как «вступительный взнос»</h2>
+            
+            <!-- ВИЗУАЛИЗАЦИЯ ШАГОВ -->
+            <div class="infographic">
+                <h3 style="color: #1a237e; text-align: center; margin-bottom: 1.5rem;">Три унизительных шага к доступу:</h3>
+                
+                <div class="step-visual">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4>150 бесплатных ответов</h4>
+                        <p>Специалист с высшим юридическим образованием и, возможно, адвокатским статусом обязан бесплатно отработать на платформе, дав 150 консультаций. Это не тестовый период, а массовая эксплуатация квалифицированного труда.</p>
+                    </div>
+                </div>
+                
+                <div class="step-visual">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4>40 положительных отзывов</h4>
+                        <p>Даже качественных ответов недостаточно. Нужно угодить 40 случайным пользователям, чтобы доказать свою «полезность» системе, которая уже использует тебя без оплаты.</p>
+                    </div>
+                </div>
+                
+                <div class="step-visual">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4>Квест в Google Forms</h4>
+                        <p>Абсурдный финальный шаг — прохождение анкеты-«квеста», которую, по словам участников, составляют недоучившиеся юристы или модераторы. Вопросы часто оторваны от реальной практики, составлены с ошибками и служат не проверкой компетенции, а фильтром лояльности и возможностью для дальнейшего произвола.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- КАРТИНКА 3 -->
+            <img src="img/3.jpg" alt="Примеры требований платформы" class="article-image">
+            <p class="image-caption">Унизительные требования для доступа к оплачиваемой работе</p>
+            
+            <p>Только преодолев эти три барьера, юрист получает право отвечать на вопросы, которые оплачиваются 8-15 рублями. Такой «вступительный взнос» не имеет аналогов в профессиональной среде и напоминает систему принудительного труда.</p>
+            
+            <div class="cta-box">
+                <h3>Прошли через этот унизительный путь?</h3>
+                <p>Объединяйтесь с коллегами для защиты профессиональных прав</p>
+                <a href="https://t.me/efimov_legal" class="tg-button" target="_blank">
+                    <i class="fab fa-telegram-plane"></i> Обсудить в Telegram
+                </a>
+            </div>
+            
+            <h2>Произвол как система: выдуманные правила и бан-молот</h2>
+            
+            <!-- КАРТИНКА 4 -->
+            <img src="img/4.jpg" alt="Произвол правил и блокировки" class="article-image">
+            <p class="image-caption">Примеры произвольных правил и блокировок от модераторов</p>
+            
+            <p>Получив доступ, юрист попадает в мир тотального непредсказуемого контроля. Правила сервиса:</p>
+            
+            <ul class="steps">
+                <li><strong>Не основаны на законодательстве.</strong> Это внутренние установки, часто меняющиеся и трактуемые модераторами по своему усмотрению.</li>
+                
+                <li><strong>Направлены на ограничение заработка.</strong> Запрет на упоминание контактов, на адекватное обоснование необходимости очной консультации, на цитирование «не тех» источников — всё это инструменты для создания поводов для санкций.</li>
+                
+                <li><strong>Приводят к бану без разбора.</strong> Блокировка аккаунта с обнулением рейтинга и «заморозкой» заработанных средств — обычная практика. Причины: от субъективной оценки «неполный ответ» до нарушения неочевидных, нигде не опубликованных внутренних регламентов.</li>
+            </ul>
+            
+            <div class="highlight">
+                <p>Юрист, посвятивший годы изучению Кодексов, оказывается бесправным перед выдуманными правилами цифровой платформы.</p>
+            </div>
+            
+            <h2>Инновационное рабство: бизнес-модель, одобренная Сколково</h2>
+            
+            <p>В этом и есть главный парадокс и этическая катастрофа:</p>
+            
+            <p>Рабство отменили в 1861 году. Но в цифровой экономике под видом «гиг-модели» и «свободной платформы» оно возрождается в новой форме.</p>
+            
+            <p>«Правовед.ру» — яркий пример. Компания, пользующаяся льготами и репутацией Сколково, выстроила систему, где юрист — не партнер, а ресурс. Ресурс, который сначала бесплатно обкатывают (150 ответов), потом допускают к микрооплате, держа под постоянной угрозой блокировки.</p>
+            
+            <!-- КАРТИНКА 5 -->
+            <img src="img/5.jpg" alt="Сравнение традиционного и цифрового рабства" class="article-image">
+            <p class="image-caption">Цифровое рабство - новая форма эксплуатации профессионалов</p>
+            
+            <div class="warning">
+                <p><strong>Цифровое рабство характеризуется:</strong> минимальной оплатой, несоизмеримой с квалификацией; отсутствием трудовых гарантий; полной зависимостью от произвола «хозяина платформы»; системой штрафов и конфискаций (блокировка счета).</p>
+                <p>Инновация здесь не в технологиях помощи людям, а в технологиях контроля и извлечения прибыли из профессионалов.</p>
+            </div>
+            
+            <div class="cta-box">
+                <h3>Считаете такую бизнес-модель недопустимой?</h3>
+                <p>Присоединяйтесь к обсуждению и поиску путей решения</p>
+                <a href="https://t.me/efimov_legal" class="tg-button" target="_blank">
+                    <i class="fab fa-telegram-plane"></i> Высказаться в Telegram
+                </a>
+            </div>
+            
+            <h2>Заключение</h2>
+            
+            <p>«Правовед.ру» создал не платформу для юристов, а цифровую плантацию. Он использует государственные преференции для проекта, который дискредитирует юридическую профессию и попирает базовые принципы справедливого труда.</p>
+            
+            <div class="quote">
+                «История «Правоведа» — это тревожный сигнал для всех отраслей. Если подобная модель получит распространение под флагом инноваций, мы рискуем откатиться к новым, цифровым формам крепостного права, где вместо барина — алгоритм и модератор, а вместо кнута — бан и обнуленный рейтинг. Рабство не отменили. Его просто вывели в цифру.»
+            </div>
+            
+            <div class="questions-box">
+                <h3>Требуется публичное обсуждение и ответ от институтов развития:</h3>
+                
+                <ul>
+                    <li><strong>Сколково:</strong> Как резиденция совмещает статус инновационного центра с поддержкой бизнес-моделей, основанных на принудительном бесплатном труде и произвольных санкциях?</li>
+                    
+                    <li><strong>Профессиональное сообщество:</strong> Готовы ли юристы мириться с таким отношением к их труду?</li>
+                    
+                    <li><strong>Регуляторы:</strong> Где грань между платформенной занятостью и цифровой эксплуатацией?</li>
+                </ul>
+                
+                <p>Пришло время открыто обсудить эти вопросы и выработать меры против цифровой эксплуатации профессионального труда.</p>
+            </div>
+        </article>
+        
+        <div class="cta-box">
+            <h3>Хотите помочь в борьбе с цифровой эксплуатацией юристов?</h3>
+            <p>Присоединяйтесь к обсуждению, делитесь своим опытом и получайте поддержку коллег</p>
+            <a href="https://t.me/efimov_legal" class="tg-button" target="_blank">
+                <i class="fab fa-telegram-plane"></i> Присоединиться к обсуждению
+            </a>
+        </div>
+        
+        <footer>
+            <p>© 2023 Общественная инициатива против цифровой эксплуатации профессионального труда</p>
+            <p>Материал основан на реальных фактах и свидетельствах юристов, столкнувшихся с системой «Правовед.ру»</p>
+            <p>По вопросам сотрудничества и поддержки: <a href="https://t.me/efimov_legal" target="_blank">Telegram: @efimov_legal</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaButtons = document.querySelectorAll('.tg-button');
+            
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('Переход в Telegram по ссылке: ' + this.href);
+                });
+            });
+            
+            // Анимация для изображений при прокрутке
+            const images = document.querySelectorAll('.article-image');
+            
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            images.forEach(img => {
+                img.style.opacity = '0.7';
+                img.style.transform = 'translateY(20px)';
+                img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>
