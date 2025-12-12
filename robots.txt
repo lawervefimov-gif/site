@@ -1,0 +1,16 @@
+# robots.txt для efimov-legal.ru
+User-agent: *
+Allow: /
+
+# Карта сайта
+Sitemap: https://efimov-legal.ru/sitemap.xml
+
+# Блокировка ненужных ботов
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
